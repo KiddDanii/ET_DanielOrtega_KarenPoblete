@@ -1,0 +1,7 @@
+{
+  "name": "ET_Programacion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
