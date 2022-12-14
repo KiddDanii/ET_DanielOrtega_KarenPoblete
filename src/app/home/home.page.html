@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+    <ion-menu-button menu="main-menu"></ion-menu-button>
+   </ion-buttons>
+    <ion-title>AssistQR</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+<ion-content class="contenido">
+   <p>Bienvenido a tu app de asistencia</p>
+  <img src="assets/logo.png" width="950cm" height="200cm">
+    <ion-button [routerLink]="['/login']" expand="full" fill="outline" shape="round" id="boton-login">
+    Inicia Sesión
+  </ion-button>
+  <ion-button [routerLink]="['/registro']" expand="full" fill="outline" shape="round" id="boton-registro">
+    Registro
+  </ion-button>
+</ion-content>

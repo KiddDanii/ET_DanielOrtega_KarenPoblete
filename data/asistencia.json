@@ -1,0 +1,47 @@
+{
+  "asistencia": [
+    {
+      "id": 1,
+      "nombreAlumno": "Felipe",
+      "seccion": "003D",
+      "asignatura": "Arquitectura",
+      "fecha": "11/12/2022"
+    },
+    {
+      "id": 2,
+      "nombreAlumno": "Karen",
+      "seccion": "005D",
+      "asignatura": "Programación",
+      "fecha": "12/12/2022"
+    },
+    {
+      "nombreAlumno": "",
+      "seccion": "",
+      "asignatura": "",
+      "fecha": "",
+      "id": 3
+    },
+    {
+      "nombreAlumno": "",
+      "seccion": "",
+      "asignatura": "",
+      "fecha": "",
+      "id": 4
+    },
+    {
+      "nombreAlumno": "",
+      "seccion": "",
+      "asignatura": "",
+      "fecha": "",
+      "id": 5
+    }
+  ],
+  "alumno": [
+    {
+      "id": 1,
+      "nombreAlumno": "",
+      "telefono": "",
+      "correo": ""
+    }
+  ]
+}

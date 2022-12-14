@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="android" text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+   </ion-buttons>
+    <ion-title>QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contenido">
+    <ion-card-header>
+      <ion-card-title id="tituloqr">Todos los alumnos deben escanear el QR cuando el profesor ingrese sus nombres y apellidos.</ion-card-title>
+    </ion-card-header>
+    <ion-card class="ion-text-center">
+      <ion-card-content>
+  
+        <ion-item>
+          <ion-label position="fixed">Modulo: </ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.nom" required></ion-input>
+        </ion-item>
+  
+        <ion-button 
+            expand="block" 
+            class="boton" 
+            (click)="generaScan()">
+            Generar Codigo QR 
+        </ion-button>
+  
+        <qrcode 
+          [qrdata]="qrCodeString" 
+          [width]="210" 
+          [errorCorrectionLevel]="'M'">
+        </qrcode>
+  
+  
+      </ion-card-content>
+   </ion-card>
+   <ion-button 
+   expand="block" 
+   class="boton" 
+   (click)="verScan()">
+       Ver Resultado del QR
+  </ion-button>
+  
+  <ion-item class="ion-text-wrap">
+   <ion-label class="ion-text-wrap">Resultado del SCANNER: {{scannedResult}}</ion-label>
+  </ion-item>
+    <br>
+    <ion-button expand="block" class="boton" (click)="presentAlert()" [routerLink]="['/asistencia']">Completar Asistencia</ion-button>
+  
+</ion-content>
+
+  

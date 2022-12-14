@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="android" text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+   </ion-buttons>
+    <ion-title>Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item *ngFor="let a of asistencia">
+    <ion-label>{{a.nombreAlumno}}</ion-label>
+    <ion-label>{{a.seccion}}</ion-label>
+    <ion-label>{{a.asignatura}}</ion-label>
+    <ion-label>{{a.fecha}}</ion-label>
+  </ion-item>
+</ion-list>
+
+<form #formulario="ngForm" (ngSubmit)="onSubmit()">
+  <ion-card class="tarjetaQr">
+
+    <ion-item>
+      <ion-label>Nombre Alumno:</ion-label>
+      <ion-input type="text" placeholder="000?" name="nombre" [(ngModel)]="asistencia.nombreAlumno" required> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sección:</ion-label>
+      <ion-input type="text" placeholder="000?" name="seccion" [(ngModel)]="asistencia.seccion" required> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Asignatura:</ion-label>
+      <ion-input type="text" placeholder="" name="asignatura" [(ngModel)]="asistencia.asignatura" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-input type="date" placeholder="" name="date" [(ngModel)]="asistencia.fecha" required></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-button [disabled]="formulario.invalid" type="submit" expand="full" color="tertiary"
+    shape="round" routerLink="/qr">Abrir clase</ion-button>
+</form>
+</ion-content>

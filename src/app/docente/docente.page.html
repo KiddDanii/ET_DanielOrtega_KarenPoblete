@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="android" text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+   </ion-buttons>
+    <ion-title>QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contenido">
+  <h1 class="ion-text-center">Hola, {{nombre}}!</h1>
+  <img src="assets/qr-code2.png" id="img" alt="">
+  <ion-button (click)="onClick()" expand="full" fill="outline" shape="round" id="generar"
+  routerLink="/qr">
+    Generar código QR
+  </ion-button>
+  <br><br><br>
+  <img src="assets/logo1.png" id="img2">
+  <ion-button (click)="cerrarSesion()" expand="full" fill="outline" shape="round" id="escanear">
+    Cerrar sesión
+  </ion-button>
+</ion-content>

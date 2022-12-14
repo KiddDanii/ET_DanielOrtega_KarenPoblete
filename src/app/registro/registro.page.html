@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="android" text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>AssistQR</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contenido">
+<p>Para registrarte, rellena tus datos</p>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-input type="text" value="" placeholder="Nombre de usuario" name="nombre"[(ngModel)]="usuario.nombre" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="email" value="" placeholder="Correo Institucional" name="email"  [(ngModel)]="usuario.email" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" value="" placeholder="Contraseña" name="password" [(ngModel)]="usuario.password" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" value="" placeholder="Rut o pasaporte" name="rut" [(ngModel)]="usuario.rut" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="tel" value="" placeholder="Número celular" name="numero" [(ngModel)]="usuario.numero" required pattern="[0-9]{9}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select multiple="false" value="alumno" default="alumno" placeholder="Seleccione tipo de cuenta" name="tipo" [(ngModel)]="usuario.tipo" required>
+        <ion-select-option value="alumno">Alumno</ion-select-option>
+        <ion-select-option value="profesor">Profesor</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button class="enviar" type="submit" expand="block">
+      Enviar
+    </ion-button>
+  </form>
+
+  <img src="assets/logo1.png" id="img">
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="android" text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+   </ion-buttons>
+    <ion-title>Feriados Chile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contenido">
+  <ion-card *ngFor="let feriado of todosFeriados">
+    <ion-card-header style="background: {{feriado.inalienable}}">
+      <ion-card-subtitle style="color: white">{{feriado.date}}</ion-card-subtitle>
+      <ion-card-title style="color: white">{{feriado.title}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

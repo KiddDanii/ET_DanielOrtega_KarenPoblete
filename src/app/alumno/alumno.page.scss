@@ -1,0 +1,42 @@
+.contenido{
+    --background: #2C1375;
+}
+#generar{
+    --background: #1c0e47 ;
+    margin: 20px;
+    display:grid ;
+    justify-content: center;
+    --padding-start:60px;
+    --padding-end:60px;
+    --border-color: #ffffff;
+    color: white;
+
+}
+
+#escanear{
+    --background: white ;
+    margin: 20px;
+    display:grid ;
+    justify-content: center;
+    --padding-start:70px;
+    --padding-end:70px;
+    --border-color: #ffffff;
+    color: black;
+}
+#img{
+    width: 200px;
+    height: 200px;
+    align-content: center;
+    margin: auto;
+    justify-content: center;
+    display: grid;
+    padding: 25px;
+}
+
+#img2{
+    display: flex;
+    align-content: center;
+    margin: auto;
+    width:150px; 
+    height:50px;
+}

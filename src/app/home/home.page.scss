@@ -1,0 +1,30 @@
+.contenido{
+    --background: #2C1375;
+}
+#boton-login{
+    --background: #1c0e47 ;
+    margin: 20px;
+    display:grid ;
+    justify-content: center;
+    --padding-start:60px;
+    --padding-end:60px;
+    --border-color: #ffffff;
+    color: white;
+}
+
+#boton-registro{
+    --background: white ;
+    margin: 20px;
+    display:grid ;
+    justify-content: center;
+    --padding-start:70px;
+    --padding-end:70px;
+    --border-color: #ffffff;
+    color: black;
+}
+p{
+ font-weight:1000;
+ color:#ffffff ;
+ text-align: center;
+ padding-top: 35px;
+}
